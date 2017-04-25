@@ -24,7 +24,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update \
         subversion \
         zlib1g \
         zlib1g-dev \
-     && rm -rf /var/lib/apt/lists/* \
+     && rm -rf /var/lib/apt/lists/*
 
 RUN  \
      wget -q -O ruby-1.8.7-p370.tar.gz http://cache.ruby-lang.org/pub/ruby/1.8/ruby-1.8.7-p370.tar.gz  \
