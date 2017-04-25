@@ -1,29 +1,29 @@
 
 FROM debian:jessie
 
-RUN DEBIAN_FRONTEND=noninteractive apt-get -y -q install \
+RUN DEBIAN_FRONTEND=noninteractive apt-get update \
+    && apt-get -y -q install \
 	build-essential \
+        curl \
 	libsqlite3-dev \
-        libcurl3 \
+        libcurl4-gnutls-dev \
+        libmagickwand-dev \
+        libmysqlclient-dev \
         libxml2 \
         libxslt1-dev \
-        libcurl4-gnutls-dev \
+        libyaml-dev \
         git-core \
         mysql-client \
-        libmysqlclient-dev \
         imagemagick \
-        libmagickwand-dev \
         memcached \
-        zlib1g \
-        zlib1g-dev \
         wget \
-        libyaml-dev \
         bison \
         libssl-dev \
         libreadline6-dev \
         autoconf \
         subversion \
-        curl \
+        zlib1g \
+        zlib1g-dev \
      && rm -rf /var/lib/apt/lists/* \
 
 RUN  \
